@@ -8,8 +8,11 @@ namespace Testing.Generator
 
         public DateTime Date(DateTime? start = null, DateTime? end = null)
         {
-            DateTime min = (start ?? DateTime.MinValue);
-            DateTime max = (end ?? DateTime.MaxValue);
+            if (start.HasValue && end.HasValue && start.Value >= end.Value)
+                throw new Exception("start date must be less than end date!");
+
+            DateTime min = start ?? DateTime.MinValue;
+            DateTime max = end ?? DateTime.MaxValue;
 
             // for timespan approach see: http://stackoverflow.com/questions/1483670/whats-the-best-practice-for-getting-a-random-date-time-between-two-date-times/1483677#1483677
             TimeSpan timeSpan = max - min;

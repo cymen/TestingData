@@ -1,6 +1,6 @@
 using System;
 
-namespace TestingData.Names
+namespace Testing.Data
 {
 	static class Names
 	{

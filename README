@@ -1,0 +1,6 @@
+C# classes that contain or generate testing data.
+
+Names.cs contains common names from U.S. census data:
+  static string[] Surname - common surnames from 
+  static string[] GivenMale - common male names
+  static string[] GivenFemale - common female names

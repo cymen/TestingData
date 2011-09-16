@@ -4,3 +4,5 @@ Names.cs contains common names from U.S. census data:
   static string[] Surname - common surnames from 
   static string[] GivenMale - common male names
   static string[] GivenFemale - common female names
+
+RandomNames.cs contains methods to generate names using Names.cs data
